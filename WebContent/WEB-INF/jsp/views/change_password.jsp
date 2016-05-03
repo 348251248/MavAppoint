@@ -42,7 +42,7 @@ width: 80%;
 			
 		</div>
 		<div class="panel-footer text-center">
-      	<input type="submit" class="btn-lg" value="Submit">
+      	<input type="submit" class="btn-lg btn-success" value="Submit">
       </div>
       </form>
 		</div>

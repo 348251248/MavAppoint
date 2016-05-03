@@ -59,12 +59,25 @@ public class CustomizeServlet extends HttpServlet {
 				String resp = dbm.updateUserNotification(user, notification);
 				if(resp != null){
 					session.setAttribute("user", user);
-					response.setHeader("Refresh","2; URL=customize");
+					response.setHeader("Refresh","3; URL=customize");
 					request.getRequestDispatcher("/WEB-INF/jsp/views/success.jsp").forward(request,response);
+					session.setAttribute("message", "");
 				} else {
-					response.setHeader("Refresh","2; URL=customize");
+					response.setHeader("Refresh","3; URL=customize");
 					request.getRequestDispatcher("/WEB-INF/jsp/views/failure.jsp").forward(request,response);
+					session.setAttribute("message", "");
 				}
+			}else{
+				if(user.getNotification().equals("yes")){
+					session.setAttribute("message", "The Notification already turned on.");
+					request.setAttribute("includeHeader", header);
+					request.getRequestDispatcher("/WEB-INF/jsp/views/customize.jsp").forward(request,response);
+				}else{
+					session.setAttribute("message", "The Notification already turned off.");
+					request.setAttribute("includeHeader", header);
+					request.getRequestDispatcher("/WEB-INF/jsp/views/customize.jsp").forward(request,response);
+				}
+			
 			}
 		} catch(Exception e){
 			

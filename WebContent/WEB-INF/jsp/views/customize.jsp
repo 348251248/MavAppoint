@@ -18,6 +18,7 @@ width: 80%;
 <div class="panel-heading text-center"><h1>Customize Settings</h1></div>
 <% ArrayList<AppointmentType> ats = (ArrayList<AppointmentType>)session.getAttribute("appointmenttypes");
 if(ats != null){ %>
+
 <div class="panel-body resize-body center-block">
 	<form action="appointments" method="post" name="cancel">
 	<div class="panel-heading text-center"><h3>Appointment Manager</h3></div>
@@ -78,10 +79,11 @@ if(ats != null){ %>
 	</div>
 </form>
 <% } %>
-
+<%  String message = (String)session.getAttribute("message");%>
 <div class="panel-body resize-body center-block">
 <form action="customize" method="POST">
 <div class="panel-heading text-center"><h3>Email Notifications</h3></div>
+ <label style="text-align: center" for="message"><font color="#0" size="4"><%=message%></font></label> <br>
 <% String notification = (String) session.getAttribute("notification");
 			if("yes".equalsIgnoreCase(notification)){
 		%>
@@ -107,7 +109,12 @@ if(ats != null){ %>
 </div>
 </div>
 
-<script> function FormSubmit(){
+<script> 
+function SetNotification(){
+	
+}
+
+function FormSubmit(){
 									var apptype = document.getElementById("apptypes").value;
 									var minutes = document.getElementById("minutes").value;
 									var params = ('minutes='+minutes+'&apptypes='+apptype);

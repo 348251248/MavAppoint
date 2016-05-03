@@ -1,6 +1,6 @@
 <jsp:include page='<%=(String) request.getAttribute("includeHeader")%>' />
 <div class="container">
-	<div class="jumbotron">
+	<div class="jumbotron masthead">
 		<h1><font style="color: #e67e22"> Mav-an-Appointment </font></h1>
 	</div>
 </div>
