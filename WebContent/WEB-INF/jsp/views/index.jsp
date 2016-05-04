@@ -10,7 +10,10 @@
 		
 		if(user==null){%>
 		<a href="advising" class="btn btn-primary btn-lg">Make an appointment Now!</a>
-		<%	}else if(!user.getRole().equalsIgnoreCase("advisor")&&!user.getRole().equalsIgnoreCase("admin")){
+		<%	}else if(user.getEmail().equals("")){%>
+			<a href="advising" class="btn btn-primary btn-lg">Make an appointment Now!</a>
+		<% }
+		else if(!user.getRole().equalsIgnoreCase("advisor")&&!user.getRole().equalsIgnoreCase("admin")){
 	    			%>		
 		<a href="advising" class="btn btn-primary btn-lg">Make an appointment Now!</a>
 		<%	}
