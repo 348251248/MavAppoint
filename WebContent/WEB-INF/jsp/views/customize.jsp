@@ -1,4 +1,6 @@
 <jsp:include page='<%=(String) request.getAttribute("includeHeader")%>' />
+<%@ page import="uta.mav.appoint.login.LoginUser"%>
+
 <style>
 .resize {
 width: 60%;
@@ -17,7 +19,8 @@ width: 80%;
 <!-- Default panel contents -->
 <div class="panel-heading text-center"><h1>Customize Settings</h1></div>
 <% ArrayList<AppointmentType> ats = (ArrayList<AppointmentType>)session.getAttribute("appointmenttypes");
-if(ats != null){ %>
+LoginUser user = (LoginUser)session.getAttribute("user");
+if(ats != null && user.getRole().equalsIgnoreCase("advisor")){ %>
 
 <div class="panel-body resize-body center-block">
 	<form action="appointments" method="post" name="cancel">

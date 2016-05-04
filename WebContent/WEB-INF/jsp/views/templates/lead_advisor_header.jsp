@@ -1,5 +1,5 @@
 <%@include file="all_advisor_header.jsp"%>
-
+</ul>
 	<ul class="nav navbar-nav navbar-right">
 
 		<li><a href="#"><font style="color: #e67e22" size="3">You are logged in as Advisor.</font></a></li>

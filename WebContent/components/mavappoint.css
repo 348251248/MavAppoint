@@ -1,7 +1,7 @@
 body {
 	padding-top: 100px;
 	padding-bottom: 100px;
-	background: url(../img/engineering.jpg);
+	background: url(../img/lg_uta_erb_front_ext_1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: #000000
@@ -24,4 +24,14 @@ h3 {
 }
 h4 {
 	color: #000000
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
 }

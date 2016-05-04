@@ -79,25 +79,47 @@
 					<h4 class="modal-title" id=addApptTypeLabel">Add Appointment</h4>
 				</div>
 				<div class="modal-body">
-					<input type="hidden" name=id2 id="id2"> <input
-						type="hidden" name=apptype id="apptype"> <input
-						type="hidden" name=start id="start"> <input type="hidden"
-						name=end id="end"> <input type="hidden" name=starttime
-						id="starttime"> <input type="hidden" name=endtime
-						id="endtime"> <input type="hidden" name=pname id="pname">
-					<input type="hidden" name=duration id="duration"> <input
-						type="hidden" name=advisor_email id="advisor_email"> Email
-					address: <br> <input type="text" name="email" id="email"
-						value="<%= user.getEmail()%>"><br> UTA Student ID: <br>
-					<input type="text" name="studentid"> <br> Phone
-					Number: <br> <input type="text" name="phoneNumber"> <br>
-					Description: <br>
-					<textarea rows=4 columns="10" name="description"></textarea>
+					<input type="hidden" name=id2 id="id2"> 
+					<input
+						type="hidden" name=apptype id="apptype">
+						 <input
+						type="hidden" name=start id="start">
+						 <input type="hidden"
+						name=end id="end"> 
+						<input type="hidden" name=starttime
+						id="starttime"> 
+						<input type="hidden" name=endtime
+						id="endtime"> 
+						<input type="hidden" name=pname id="pname">
+					<input type="hidden" name=duration id="duration"> 
+					<input
+						type="hidden" name=advisor_email id="advisor_email"> 
+						
+						<div class="form-group">
+						<label for="email_address">Email address:</label>
+					 	<input type="text" name="email" id="email" class="form-control"
+						value="<%= user.getEmail()%>"> 
+						</div>
+						
+						<div class="form-group">
+						<label for="studentId">UTA Student ID:</label>
+						<input type="text" name="studentid" class="form-control" placeholder="Please enter your student ID">
+						</div>
+						
+						<div class="form-group">
+						<label for="phonenum">Phone Number:</label>
+						<input type="text" name="phoneNumber" class="form-control" placeholder="XXX-XXX-XXXX">
+						</div>
+						
+						<div class="form-group">
+						<label for="description">Description:</label>
+						<textarea rows=4 columns="10" name="description" class="form-control"></textarea>
+						</div>				
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
 						Close</button>
-					<input type="submit" value="Submit"
+					<input type="submit" value="Submit" class="btn btn-success"
 						onclick="javascript:FormSubmit();">
 				</div>
 			</div>
